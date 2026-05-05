@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqtive Water – Premium Customized Packaged Drinking Water</title>
+    <meta name="description"
+        content="Experience pure, personalized hydration with Aqtive Water's customizable bottled solutions, perfect for corporate events, hospitality, and premium gifting.">
+    <link rel="icon" type="image/png"
+        href="https://aqtivewater.com/wp-content/uploads/2025/02/cropped-site-icon-270x270.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-purple: #732082;
+            --accent-purple: #9b44b2;
+            --dark-navy: #003366;
+            --white: #FFFFFF;
+            --light-bg: #f8f0ff;
+            --text-dark: #1a1a1a;
+            --text-gray: #555555;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary-purple);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-purple);
+            transform: scale(1.04);
+            box-shadow: 0 10px 20px rgba(115, 32, 130, 0.2);
+        }
+
+        .btn-purple {
+            background: var(--primary-purple);
+            color: var(--white);
+        }
+
+        .btn-purple:hover {
+            background: var(--accent-purple);
+            transform: scale(1.04);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-purple);
+            color: var(--primary-purple);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-purple);
+            color: var(--white);
+            transform: scale(1.04);
+        }
+
+        /* --- STICKY HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            box-shadow: none;
+            z-index: 9999;
+            transition: var(--transition);
+            padding: 20px 0;
+        }
+
+        header.scrolled {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-text {
+            color: var(--primary-purple);
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Poppins';
+            line-height: 1;
+        }
+
+        .logo-sub {
+            color: #58595b;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 2px;
+        }
+
+        .logo-bottom-text {
+            color: #58595b;
+            font-size: 8px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-top: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-purple);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta .btn {
+            padding: 10px 25px;
+            font-size: 14px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--primary-blue);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 40, 100, 0.55);
+            z-index: -1;
+        }
+
+        .hero-top-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.2s;
+        }
+
+        .hero h4 {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 400;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.4s;
+        }
+
+        .hero p {
+            font-size: clamp(14px, 2vw, 18px);
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.6s;
+        }
+
+        .hero-bottom-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            z-index: 3;
+        }
+
+        .hero-bottom-wave svg {
+            width: 100%;
+            height: 100px;
+            fill: #fff;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- VIDEO CAROUSEL --- */
+        .video-carousel-section {
+            background: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* --- BRANDS SECTION REDESIGN --- */
+        .brands-section {
+            background-image: url('https://aqtivewater.com/wp-content/uploads/2025/01/white-shape.png');
+            background-size: cover;
+            background-position: center;
+            padding: 140px 0;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .wave-top-purple {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-image: url('https://aqtivewater.com/wp-content/uploads/2025/01/top-shape.png');
+            background-size: contain;
+            filter: hue-rotate(240deg) brightness(0.6); /* Approximate purple wave if direct URL not found */
+            transform: rotate(180deg);
+        }
+
+        .wave-bottom-purple {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-image: url('https://aqtivewater.com/wp-content/uploads/2025/01/top-shape.png');
+            background-size: contain;
+            filter: hue-rotate(240deg) brightness(0.6);
+        }
+
+        .brands-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .brands-title {
+            color: var(--primary-purple);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .title-underline {
+            width: 60px;
+            height: 3px;
+            background: var(--primary-purple);
+            margin: 0 auto;
+        }
+
+        .brands-container {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            align-items: center;
+        }
+
+        .brand-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            transition: var(--transition);
+            height: 100px;
+        }
+
+        .brand-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .brand-item:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 992px) {
+            .brands-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); }
+            .brands-container { padding: 20px; }
+        }
+
+        .marquee-wrapper {
+            overflow: hidden;
+            width: 100%;
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: scrollMarquee 40s linear infinite;
+        }
+
+        .video-card {
+            width: 220px;
+            height: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: #000;
+        }
+
+        .video-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes scrollMarquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* --- PRODUCT GRID REDESIGN --- */
+        .products-section {
+            background: #fff;
+            background-image: url('https://aqtivewater.com/wp-content/uploads/2025/01/white-shape.png');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .products-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 50%, rgba(248, 240, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+        }
+
+        .product-layout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-info-left {
+            flex: 0 0 380px;
+            text-align: left;
+        }
+
+        .product-info-left .section-title {
+            font-size: 56px;
+            color: #231f20;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .product-info-left .section-subtitle {
+            font-size: 18px;
+            color: #58595b;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .purity-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        .arrow-down-container {
+            margin-bottom: 40px;
+            padding-left: 10px;
+        }
+
+        .purple-arrow-svg {
+            width: 80px;
+            height: 80px;
+            fill: var(--primary-purple);
+            transform: rotate(-10deg);
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 45px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            background: var(--primary-purple);
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .product-grid-right {
+            flex: 1;
+            overflow: visible;
+        }
+
+        .product-carousel {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            position: relative;
+            padding-right: 40px;
+        }
+
+        .product-cards-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            width: 100%;
+            justify-content: flex-start;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .product-cards-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
+
+        .product-carousel .product-card {
+            flex: 0 0 300px;
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+            text-align: center;
+            opacity: 1;
+            transform: none;
+        }
+
+        .product-carousel .product-image {
+            height: 380px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-carousel .product-image img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-carousel .product-card h3 {
+            font-size: 16px;
+            color: var(--primary-purple);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product-carousel .product-card .btn {
+            width: 100%;
+            border-radius: 8px;
+            padding: 15px;
+            font-weight: 600;
+            background: var(--primary-purple);
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-purple);
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .carousel-arrow.prev { 
+            left: -20px; 
+            z-index: 100;
+            pointer-events: auto;
+        }
+        .carousel-arrow.next { 
+            right: 10px; 
+            z-index: 100;
+            pointer-events: auto;
+        }
+
+        @media (max-width: 1200px) {
+            .product-layout { flex-direction: column; gap: 80px; }
+            .product-info-left { flex: 1; text-align: center; max-width: 600px; }
+            .contact-btn { margin: 0 auto; }
+            .carousel-arrow.prev { left: 0px; }
+            .carousel-arrow.next { right: 0px; }
+        }
+
+        /* --- SUSTAINABILITY SECTION --- */
+        .sustainability {
+            background: var(--white);
+        }
+
+        .sus-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .sus-content h2 {
+            font-size: clamp(24px, 4vw, 34px);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .sus-content p {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+        }
+
+        .sus-list {
+            margin-top: 30px;
+        }
+
+        .sus-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .sus-item i {
+            color: var(--accent-blue);
+            font-size: 20px;
+        }
+
+        .sus-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .sus-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .wave-bottom {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            z-index: 5;
+        }
+
+        /* --- STATS SECTION --- */
+        .stats-section {
+            background: linear-gradient(to bottom, var(--primary-purple), var(--dark-navy));
+            color: var(--white);
+            padding: 140px 0;
+        }
+
+        .stats-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .stats-header h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: clamp(40px, 6vw, 56px);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .stats-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* --- BRAND MARQUEE --- */
+        .brands-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .brand-card {
+            padding: 15px 30px;
+            border: 2px solid #eef6ff;
+            border-radius: 12px;
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            white-space: nowrap;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 18px;
+        }
+
+        /* --- WHAT WE OFFER --- */
+        .offer-section {
+            background: var(--light-bg);
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .offer-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .offer-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+        }
+
+        .offer-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .offer-card h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .offer-card p {
+            font-size: 15px;
+            color: var(--text-gray);
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-section {
+            background: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .contact-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form-card h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--primary-blue);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-bottom: 2px solid #eee;
+            font-family: inherit;
+            font-size: 16px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-blue);
+        }
+
+        textarea.form-control {
+            resize: none;
+        }
+
+        .success-msg {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* --- CERTIFICATIONS --- */
+        .cert-section {
+            background: var(--light-bg);
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 100px;
+        }
+
+        .cert-card img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--dark-navy);
+            color: var(--white);
+            padding: 100px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            padding-bottom: 60px;
+        }
+
+        .footer-logo-text {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            margin-bottom: 25px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            opacity: 0.8;
+            max-width: 450px;
+            line-height: 1.8;
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-blue);
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .contact-info li {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .contact-info i {
+            color: var(--accent-blue);
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding: 25px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: #00264d;
+        }
+
+        .footer-bottom-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* --- SCROLL TO TOP --- */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .nav-container {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                display: none;
+                z-index: 100;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .hero-bottom-wave svg {
+                height: 50px;
+            }
+
+            .sus-container,
+            .stats-container,
+            .contact-container,
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats-image {
+                order: -1;
+            }
+
+            .footer-bottom-flex {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-text">AQTIVE</div>
+                <div class="logo-sub">ABOVE & BEYOND THE OTHERS</div>
+                <div class="logo-bottom-text">PACKAGED DRINKING WATER</div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#customization">Customization</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="tel:+916291212441" class="btn btn-primary">
+                    <i class="fas fa-phone-alt"></i> +91 6291212441
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://aqtivewater.com/wp-content/uploads/2025/02/Aqtive-Water-28-02-2025.mp4"
+                type="video/mp4">
+        </video>
+        <div class="hero-overlay" style="background: rgba(255, 255, 255, 0);"></div>
+    </section>
+
+    <!-- Video Carousel -->
+    <section class="video-carousel-section" id="gallery">
+        <div class="marquee-wrapper">
+            <div class="marquee-content" id="videoMarquee">
+                <!-- Videos will be injected here via JS to loop -->
+            </div>
+        </div>
+        <div style="margin-top: 40px;">
+            <a href="#contact" class="btn btn-primary">Customize</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="product-layout">
+                <div class="product-info-left">
+                    <h2 class="section-title">Our Range of <br>Premium Water</h2>
+                    <p class="section-subtitle">Thoughtfully Packaged to Keep You Revitalised Throughout the Day.</p>
+                    
+                    <div class="purity-text">
+                        Choose Purity, Choose Quality – <br>Choose AQTIVE Water
+                    </div>
+                    
+                    <div class="arrow-down-container">
+                        <svg class="purple-arrow-svg" viewBox="0 0 24 24">
+                            <path d="M11 4v12.17l-4.59-4.59L5 13l7 7 7-7-1.41-1.41L13 16.17V4h-2z"/>
+                        </svg>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary contact-btn">
+                        Contact Us <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="product-grid-right">
+                    <div class="product-carousel">
+                        <div class="carousel-arrow prev">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                        </div>
+                        <div class="product-cards-container">
+                            <!-- Product 1 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://aqtivewater.com/wp-content/uploads/2025/02/500ML-Round-Bottle.png" alt="Water Bottle 500ML Round">
+                                </div>
+                                <h3>Water Bottle 500ML Round</h3>
+                                <button class="btn btn-primary">Customize</button>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://aqtivewater.com/wp-content/uploads/2025/02/1L-Round-Bottle.png" alt="Water Bottle 1L Round">
+                                </div>
+                                <h3>Water Bottle 1L Round</h3>
+                                <button class="btn btn-primary">Customize</button>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://aqtivewater.com/wp-content/uploads/2025/02/250ML-Round-Bottle.png" alt="Water Bottle 250ML">
+                                </div>
+                                <h3>Water Bottle 250ML</h3>
+                                <button class="btn btn-primary">Customize</button>
+                            </div>
+                        </div>
+                        <div class="carousel-arrow next">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability" id="about">
+        <div class="container">
+            <div class="sus-container">
+                <div class="sus-content">
+                    <h2>Our Commitment to Quality and Sustainability</h2>
+                    <p>With our state-of-the-art manufacturing facility in Dankuni, West Bengal, and years of expertise
+                        in the drinking water sector, we ensure that every bottle of AQTIVE meets the most stringent
+                        safety and quality standards. Our water undergoes a multi-stage filtration and purification
+                        process, guaranteeing crisp, refreshing, and safe drinking water in every sip.</p>
+                    <p>But we didn't stop there. As advocates of environmental responsibility, we designed AQTIVE to be
+                        more than just a packaged drinking water brand—we are part of the green revolution. Our
+                        commitment to sustainability is reflected in our eco-conscious packaging and responsible water
+                        sourcing, helping businesses reduce their environmental footprint while serving their customers
+                        with the best.</p>
+
+                    <div class="sus-list">
+                        <div class="sus-item">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>AQTIVE Water Sustainability Efforts</h4>
+                        </div>
+                        <div class="sus-item">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Eco-Friendly Practices</h4>
+                        </div>
+                        <div class="sus-item">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Water Conservation</h4>
+                        </div>
+                        <div class="sus-item">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Recycling Initiatives</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="sus-image">
+                    <img src="https://aqtivewater.com/wp-content/uploads/2025/01/mpdel-drinking-water.png"
+                        alt="Sustainability">
+                </div>
+            </div>
+        </div>
+        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/top-shape.png" class="wave-bottom" alt="Wave">
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/top-shape.png"
+            style="position:absolute; top:0; left:0; width:100%; transform: rotate(180deg);" alt="Wave">
+
+        <div class="container">
+            <div class="stats-header">
+                <h2>Everywhere In India, Always With You!</h2>
+                <p>East Coast Beverages has a stronghold in West Bengal and some parts of East India with Aqtive
+                    expanding it's presence from Kolkata to rest of Bengal. The organization aims to expand to other
+                    States as well in coming years</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stats-image">
+                    <img src="https://aqtivewater.com/wp-content/uploads/2025/01/bottle-wordcloud.jpg"
+                        alt="Bottle Word Cloud">
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Year of Operations +</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">Co-Packers +</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1">0</span>
+                        <span class="stat-label">Lakh Daily Production +</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Distributors +</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/white-shape.png" class="wave-bottom" alt="Wave">
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section" id="brands">
+        <div class="wave-top-purple"></div>
+        
+        <div class="container">
+            <div class="brands-header">
+                <h2 class="brands-title">Brands That Trust Us</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="brands-container">
+                <div class="brands-grid">
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/02/HE.jpg" alt="Holiday Express">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/02/CRYSTAL.jpg" alt="Orion Crystal">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/02/ORION.jpg" alt="Orion Sapphire">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/02/wah-janab.jpg" alt="Wah Janaab">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/03/Guddu-Biryani-Restaurant.jpg" alt="Guddu Biryani">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/03/Haji-Saheb.jpg" alt="Haji Saheb">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/03/KD-Cafe.jpg" alt="KD Cafe">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/03/Mojlish-job.jpg" alt="Majlis">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/03/Ruslaan.jpg" alt="Ruslaan">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/03/Regal.jpg" alt="Regale">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave-bottom-purple"></div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="offer-section">
+        <div class="container">
+            <h1 style="text-align: center; margin-bottom: 60px;">What We Offer</h1>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/Maxium-Purity.png" alt="Icon">
+                    </div>
+                    <h4>Custom-Branded Water Bottles</h4>
+                    <p>Tailored packaging for businesses, hotels, and corporate events.</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/Chlorine-Free.png" alt="Icon">
+                    </div>
+                    <h4>High-Quality Purification</h4>
+                    <p>Multi-stage purification process from Sand filter, Carbon Filter, Micron Filter, Reverse Osmosis,
+                        Mineralization, UV, and Ozonation.</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/Filtration.png" alt="Icon">
+                    </div>
+                    <h4>Sustainable Packaging Solutions</h4>
+                    <p>Reducing plastic waste with eco-friendly options.</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/Healthy-Water.png" alt="Icon">
+                    </div>
+                    <h4>Bulk Supply & Logistics</h4>
+                    <p>Reliable distribution for seamless order fulfilment</p>
+                </div>
+            </div>
+        </div>
+        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/white-shape.png" class="wave-bottom" alt="Wave">
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 60px;">Put Your Logo Where It Matters – On AQTIVE Water</h2>
+            <div class="contact-container">
+                <div class="contact-image">
+                    <img src="https://aqtivewater.com/wp-content/uploads/2025/01/Aqtive-Bottles.jpg"
+                        alt="Aqtive Bottles">
+                </div>
+                <div class="contact-form-card">
+                    <h3>Get In Touch</h3>
+                    <div class="success-msg" id="successMsg">Thank you! We'll get back to you soon.</div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Mobile" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="City" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="State" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="cert-section" id="certifications">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Certifications</h2>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content" id="certMarquee" style="animation-duration: 30s;">
+                <!-- Certs will be injected here via JS -->
+            </div>
+        </div>
+        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/bottom-shape.png" class="wave-bottom" alt="Wave">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <div class="footer-logo-text">AQTIVE WATER</div>
+                        <img src="https://aqtivewater.com/wp-content/uploads/2025/01/Aqtive-white-Logo.png"
+                            alt="Aqtive Logo">
+                    </div>
+                    <p>Aqtive Water is India's trusted premium water brand, dedicated to delivering pure, mineral-rich
+                        hydration for a healthier lifestyle. Our mission is to provide the highest quality water while
+                        promoting sustainability and eco-friendly practices. Experience the perfect blend of purity,
+                        trust, and innovation with every drop of Aqtive Water.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-building"></i>
+                            <span>East Coast Beverages</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Suite No. 11, 1st Floor, 209 - Karnani Estate, AJC Bose Road, Kolkata-700017</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+916291212441">+91 6291212441</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@aqtivewater.com">info@aqtivewater.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px; margin-bottom: 15px;">Opening Hours</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+
+                    <h4 style="margin-top: 25px; margin-bottom: 10px;">Follow Us:</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573199545839" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aqtivewater/" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-flex">
+                    <p>Copyright © 2026 Aqtive Water | All Rights Reserved</p>
+                    <p>Powered by: Carney Technologies Services</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <div id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Data for Marquees
+        const videos = [
+            "https://aqtivewater.com/wp-content/uploads/2025/02/Holiday-Express.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/02/Orion-Crystal.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/02/Orion-Sapphire.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/02/wah_janaab.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/02/1L-Round-Bottle-Lebel.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/02/500ML-Round-Bottle-Lebel.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/02/250ML-Round-Bottle-Lebel.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/7Grams.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/Asma-Dhaba.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/Avaas-Joka.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/Haji-Saheb-Water-bottle.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/HFC.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/Jol-hi-jibon.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/Mann-o-Salwa.mp4",
+            "https://aqtivewater.com/wp-content/uploads/2025/07/Prabhuji.mp4"
+        ];
+
+        const brands = [
+            "Holiday Express", "Orion Crystal", "Orion Sapphire", "Wah Janaab",
+            "1L Round Bottle", "500ML Round Bottle", "250ML Round Bottle",
+            "7Grams", "Asma Dhaba", "Avaas Joka", "Haji Saheb", "HFC",
+            "Jol Hi Jibon", "Mann-o-Salwa", "Prabhuji"
+        ];
+
+        const certs = [
+            "https://aqtivewater.com/wp-content/uploads/2025/01/FSSAI-Logo.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/HACCP-Logo.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/IAF-Logo.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/ISI-Logo.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/ISO-9001-2015.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/ISO-22000.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/MSME-Logo.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/Qro-logo.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/UDYAM-Logo.jpg",
+            "https://aqtivewater.com/wp-content/uploads/2025/01/UKAF-Logo.jpg"
+        ];
+
+        // Populate Video Marquee
+        const videoMarquee = document.getElementById('videoMarquee');
+        const populateVideos = () => {
+            const videoCards = videos.map(src => `
+                <div class="video-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="${src}" type="video/mp4">
+                    </video>
+                </div>
+            `).join('');
+            videoMarquee.innerHTML = videoCards + videoCards; // Duplicate for loop
+        };
+
+        // Populate Brand Marquee
+        const brandMarquee = document.getElementById('brandMarquee');
+        const populateBrands = () => {
+            const brandCards = brands.map(name => `
+                <div class="brand-card">${name}</div>
+            `).join('');
+            brandMarquee.innerHTML = brandCards + brandCards;
+        };
+
+        // Populate Cert Marquee
+        const certMarquee = document.getElementById('certMarquee');
+        const populateCerts = () => {
+            const certCards = certs.map(src => `
+                <div class="cert-card">
+                    <img src="${src}" alt="Certification">
+                </div>
+            `).join('');
+            certMarquee.innerHTML = certCards + certCards;
+        };
+
+        populateVideos();
+        populateBrands();
+        populateCerts();
+
+        // Navbar Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            revealObserver.observe(card);
+        });
+
+        // Counter Animation
+        const countUp = (el) => {
+            const target = parseInt(el.getAttribute('data-target'));
+            let count = 0;
+            const duration = 2000;
+            const steps = 60;
+            const increment = target / steps;
+            const stepTime = duration / steps;
+
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    el.innerText = target;
+                    clearInterval(timer);
+                } else {
+                    el.innerText = Math.floor(count);
+                }
+            }, stepTime);
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numbers = entry.target.querySelectorAll('.stat-number');
+                    numbers.forEach(num => countUp(num));
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        if (document.querySelector('.stats-grid')) {
+            statsObserver.observe(document.querySelector('.stats-grid'));
+        }
+
+        // Quantity Selector Functionality
+        document.querySelectorAll('.product-card').forEach(card => {
+            const minus = card.querySelector('.minus');
+            const plus = card.querySelector('.plus');
+            const input = card.querySelector('.qty-input');
+
+            if (minus && plus && input) {
+                minus.addEventListener('click', () => {
+                    let val = parseInt(input.value);
+                    if (val > 1) input.value = val - 1;
+                });
+
+                plus.addEventListener('click', () => {
+                    let val = parseInt(input.value);
+                    input.value = val + 1;
+                });
+            }
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMsg');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                successMsg.style.display = 'block';
+                contactForm.reset();
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+            });
+        }
+
+        // Scroll Top Button
+        const scrollTop = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+
+        if (scrollTop) {
+            scrollTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+         // --- PRODUCT CAROUSEL LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const productPrevBtn = document.querySelector('.products-section .carousel-arrow.prev');
+            const productNextBtn = document.querySelector('.products-section .carousel-arrow.next');
+            const productCardsContainer = document.querySelector('.products-section .product-cards-container');
+
+            if (productPrevBtn && productNextBtn && productCardsContainer) {
+                console.log('Carousel elements found'); // For internal verification if needed
+                
+                productPrevBtn.onclick = () => {
+                    productCardsContainer.scrollLeft -= 400;
+                };
+                
+                productNextBtn.onclick = () => {
+                    productCardsContainer.scrollLeft += 400;
+                };
+            } else {
+                console.error('Carousel elements not found:', { productPrevBtn, productNextBtn, productCardsContainer });
+            }
+        });
+    </script>
+</body>
+
+</html>
