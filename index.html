@@ -183,23 +183,27 @@
             text-transform: uppercase;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
         .hamburger {
             display: none;
             cursor: pointer;
-            width: 45px;
-            height: 45px;
-            background: var(--primary-purple);
+            background-color: #732082; /* Official Purple */
+            padding: 8px 10px;
             border-radius: 5px;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
 
         .hamburger span {
             width: 25px;
             height: 3px;
-            background: var(--white);
+            background: white;
             border-radius: 2px;
             transition: var(--transition);
         }
@@ -207,21 +211,34 @@
         @media (max-width: 992px) {
             .nav-links {
                 position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100vh;
-                background: var(--white);
+                top: 80px; /* Below header */
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: #f2f4f8; /* Official Mobile BG */
                 flex-direction: column;
-                justify-content: center;
-                padding: 50px;
-                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+                justify-content: flex-start;
+                padding: 40px 0;
                 transition: 0.4s ease-in-out;
                 z-index: 1000;
+                display: none;
             }
 
             .nav-links.active {
-                right: 0;
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid #e1e4e8;
+            }
+
+            .nav-links a {
+                padding: 15px 30px;
+                width: 100%;
+                display: block;
+                font-size: 16px;
+                color: #333;
             }
 
             .hamburger {
@@ -1088,6 +1105,15 @@
             .brand-item { height: 80px; padding: 10px; }
             
             .product-carousel { padding-right: 0; }
+            .product-cards-container {
+                scroll-snap-type: x mandatory;
+                gap: 20px;
+            }
+            .product-card {
+                flex: 0 0 100%; /* Shows one card on mobile */
+                scroll-snap-align: center;
+            }
+            
             .carousel-arrow { width: 40px; height: 40px; font-size: 20px; }
             .carousel-arrow.prev { left: 0; }
             .carousel-arrow.next { right: 0; }
@@ -1131,82 +1157,10 @@
                 text-align: center;
             }
         }
-        .desktop-hide { display: none !important; }
-        @media (max-width: 768px) {
-            .desktop-hide { display: block !important; }
-            .mobile-bottle-row.desktop-hide { display: flex !important; }
-            .mobile-hide { display: none !important; }
-        }
     </style>
 </head>
 
 <body>
-
-    <!-- Mobile Specific Design Overrides -->
-    <style>
-        @media (max-width: 768px) {
-            .hero {
-                height: auto;
-                background: #f8f0ff;
-                padding-top: 100px;
-                display: block;
-            }
-            .hero video { display: none; }
-            
-            .mobile-bottle-row {
-                display: flex;
-                justify-content: space-around;
-                align-items: flex-end;
-                padding: 20px 10px;
-                background: #f8f0ff;
-            }
-            .mobile-bottle-row img {
-                width: 20%;
-                height: auto;
-            }
-            
-            .custom-text-section {
-                background: #732082 url('https://www.transparenttextures.com/patterns/constellation.png');
-                color: white;
-                padding: 60px 20px;
-                text-align: center;
-                position: relative;
-            }
-            
-            .custom-text-section::before {
-                content: '';
-                position: absolute;
-                top: -30px;
-                left: 0;
-                width: 100%;
-                height: 30px;
-                background-image: url('https://aqtivewater.com/wp-content/uploads/2025/01/top-shape.png');
-                background-size: contain;
-                filter: hue-rotate(240deg) brightness(0.6);
-                transform: rotate(180deg);
-            }
-
-            .custom-text-section h2 {
-                font-size: 28px;
-                font-weight: 700;
-                line-height: 1.2;
-                margin-bottom: 20px;
-            }
-            
-            .custom-text-section h4 {
-                font-style: italic;
-                font-weight: 400;
-                margin-bottom: 20px;
-                opacity: 0.9;
-            }
-            
-            .custom-text-section p {
-                font-size: 15px;
-                line-height: 1.6;
-                opacity: 0.8;
-            }
-        }
-    </style>
 
     <!-- Header -->
     <header id="header">
@@ -1249,21 +1203,6 @@
                 type="video/mp4">
         </video>
         <div class="hero-overlay" style="background: rgba(255, 255, 255, 0);"></div>
-        
-        <!-- Mobile Bottle Row (Visible only on mobile) -->
-        <div class="mobile-bottle-row desktop-hide">
-            <img src="https://aqtivewater.com/wp-content/uploads/2025/02/ORION.jpg" alt="Bottle 1">
-            <img src="https://aqtivewater.com/wp-content/uploads/2025/02/HE.jpg" alt="Bottle 2">
-            <img src="https://aqtivewater.com/wp-content/uploads/2025/02/CRYSTAL.jpg" alt="Bottle 3">
-            <img src="https://aqtivewater.com/wp-content/uploads/2025/02/wah-janab.jpg" alt="Bottle 4">
-        </div>
-    </section>
-
-    <!-- Mobile Text Section (Visible only on mobile) -->
-    <section class="custom-text-section desktop-hide">
-        <h2>Customize Water Bottles to Showcase Your Brand or Message</h2>
-        <h4>Looking for personalised water bottles that genuinely capture your message?</h4>
-        <p>Aqtive offers custom water bottles online, letting you design a personal or promotional statement piece. Whether in the office, at home, working out at the gym, or exploring the great outdoors, our water bottle printing ensures your brand or message stands out.</p>
     </section>
 
     <!-- Video Carousel -->
