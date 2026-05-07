@@ -1,16 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Custom Cursor
     const cursor = document.getElementById('cursor');
-    const follower = document.getElementById('cursor-follower');
 
     document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        
-        setTimeout(() => {
-            follower.style.left = e.clientX - 10 + 'px';
-            follower.style.top = e.clientY - 10 + 'px';
-        }, 50);
+        if(cursor) {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        }
     });
 
     // Swiper Initialization
